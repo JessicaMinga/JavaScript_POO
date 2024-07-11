@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let numeroDeElementos = parseInt(prompt("Ingrese el número de elementos de la serie: "));
+        if (isNaN(numeroDeElementos) || numeroDeElementos <= 0) {
+            alert("Ingrese un número válido");
+            return;
+        }
+
+        function fibonnacci(n) {
+            if (n == 0 || n == 1) {
+                return n;
+            } else {
+                return fibonnacci(n - 1) + fibonnacci(n - 2);
+            }
+        }
+
+        for (let i = 0; i < numeroDeElementos; i++) {
+            console.log(fibonnacci(i));
+        }
+    </script>
+</body>
+
+</html>
