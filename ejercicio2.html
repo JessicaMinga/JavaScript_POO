@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2</title>
 </head>
+
 <body>
-    
+    <script>
+        const inicio = ["una cadena", 3, 9, 1, 10, 500, 1, 10, true];
+        const numerosOrdenados = ordenarNumeros(inicio);
+        console.log(numerosOrdenados); 
+
+        function ordenarNumeros(arreglo) {
+            const numeros = [];
+            for (const elemento of arreglo) {
+                if (typeof elemento === 'number') {
+                    numeros.push(elemento);
+                }
+            }
+            // Ordenar el arreglo 'numeros' de mayor a menor
+            numeros.sort((a, b) => b - a);
+            return numeros;
+        }
+    </script>
 </body>
-</html>ml
+
+</html>
